@@ -1,0 +1,87 @@
+.contribution {
+    margin-top: 100px;
+
+    &__month {
+        width: 950px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__month-name {
+        font-size: 12px;
+    }
+
+    &__body {
+        display: flex;
+        margin-top: 5px;
+    }
+
+    &__week-days {
+        vertical-align: middle;
+        font-size: 12px;
+        margin-top: 22px;
+        margin-right: 2px;
+    }
+
+    &__cells {
+        display: inline-flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: #{(10 + 8) * 8}px;
+    }
+
+    &__cell {
+        height: 15px;
+        width: 15px;
+        background-color: #EDEDED;
+        margin: 2px;
+    }
+
+    &__degree {
+        margin-top: 20px;
+        padding-left: 28px;
+        display: flex;
+        justify-content: space-between;
+        width: 260px;
+    }
+
+    &__degree-cells {
+        display: flex;
+    }
+
+    &__degree-cell {
+        height: 15px;
+        width: 15px;
+        background-color: #EDEDED;
+        margin: 2px;
+    }
+
+    &__data {
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__data-item {
+        padding: 8px;
+        margin: 2px;
+        background-color: #EDEDED;
+        border: 1px solid grey;
+    }
+}
+
+.cell-2 {
+    background-color: #b4d4ef;
+}
+
+.cell-3 {
+    background-color: #87a7c6;
+}
+
+.cell-4 {
+    background-color: #5b7a9d;
+}
+
+.cell-5 {
+    background-color: #2a4467;
+}
