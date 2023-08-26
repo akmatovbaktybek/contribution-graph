@@ -1,6 +1,6 @@
 
 
-# neobis_front_auth
+# Contribution Graph
 ---
 ### Ссылка, кликните для демо: 
 [клик](https://rad-valkyrie-013a63.netlify.app/)
@@ -11,7 +11,7 @@
 
 Выполните в терминале:
 ```
-git clone https://github.com/akmatovbaktybek/neobis_front_auth.git
+git clone https://github.com/akmatovbaktybek/contribution-graph.git
 
 npm install
 
