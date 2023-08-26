@@ -3,7 +3,8 @@ import Month from '../Month';
 import WeekDay from '../WeekDays';
 
 import { useState, useEffect } from 'react';
-import { format } from 'date-fns';
+import { format, parseISO } from 'date-fns';
+import ruLocale from 'date-fns/locale/ru';
 import './index.scss'
 
 const ContributionGraph = () => {
@@ -69,8 +70,9 @@ const ContributionGraph = () => {
                 {/* сделал как получилось */}
                 <div className="contribution__data">
                     {Object.entries(data).map(([dateString, value]) => {
-                        const date = new Date(dateString);
-                        const formattedDate = format(date, 'dd.MM.yyyy');
+                        const date = parseISO(dateString);
+                        const formattedDate = format(date, 'eeee, d MMMM, yyyy', { locale: ruLocale });
+
 
                         let backgroundClass;
                         if (value >= 1 && value <= 9) {
@@ -85,7 +87,8 @@ const ContributionGraph = () => {
 
                         return (
                             <div className={`contribution__data-item ${backgroundClass}`} key={dateString}>
-                                {formattedDate}: {value}
+                                <span className='contribution__contributions-amount'>{value} contributions</span>
+                                <span className='contribution__contributions-date'>{formattedDate}</span>
                             </div>
                         );
                     })}
